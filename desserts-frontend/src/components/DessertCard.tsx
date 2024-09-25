@@ -1,3 +1,5 @@
+import AddToCartBtn from "./AddToCartBtn"
+
 export type DessertCardProp = {
     name: string,
     category: string,
@@ -12,9 +14,14 @@ export type DessertCardProp = {
 
 const DessertCard = (props: DessertCardProp) => {
   return (
-    <div>
-      <h2>{props.name}</h2>
+    <div className="dessert-card">
       <img src={props.image?.desktop} alt="" />
+      
+      <AddToCartBtn/>
+
+      <h4>{props.category}</h4>
+      <h2>{props.name}</h2>
+      <h3>${props.price}</h3>
     </div>
   )
 }
