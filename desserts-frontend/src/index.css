@@ -28,8 +28,13 @@
 }
 
 .dessert-card{
-  h2, h4{
+  h2{
     color: var(--Rose900);
+    font-size: 1.2rem;
+  }
+  h4{
+    color: var(--Rose400);
+    font-weight: normal;
   }
 }
 
@@ -56,6 +61,7 @@
   border-radius: calc(var(--height) / 2);
   font-weight: bold;
   background-color: white;
+  transition: background-color 0.5s;
 }
 
 .used{
@@ -80,4 +86,8 @@
   top: calc(var(--height) / 2 * -1);
   left: 50%;
   transform: translate(-50%);
+}
+
+.dessert-card:has(.used)>img{
+  border: 2px solid var(--Red);
 }
