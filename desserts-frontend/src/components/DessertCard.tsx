@@ -14,7 +14,7 @@ export type DessertCardProp = {
 
 const DessertCard = (props: DessertCardProp) => {
   return (
-    <div>
+    <div className="dessert-card">
         <img src={props.image.desktop} />
         <AddToCartBtn/>
         <h4>{props.category}</h4>

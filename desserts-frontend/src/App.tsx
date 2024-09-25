@@ -11,7 +11,7 @@ const App = () => {
   },[])
 
   return (
-    <div>
+    <div className="dessert-grid">
       {
         desserts.map(dessert => <DessertCard {...dessert}/>)
       }
