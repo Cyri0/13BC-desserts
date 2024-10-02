@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
+import CartItem from './CartItem'
 
-type CartItemType = {
+export type CartItemType = {
     item: {name: string, price: number},
     quantity: number
 }
@@ -12,14 +13,15 @@ const Cart = () => {
     setCart([
         { item: {
             name: "Piskóta", 
-            price:5
-        }, quantity: 10}
+            price:7
+        }, quantity: 3}
     ])
   },[])
 
   return (
     <div>
         <h2>Your Cart ({cart.length})</h2>
+        {cart.map(cartItem => <CartItem {...cartItem}/>)}
     </div>
   )
 }
