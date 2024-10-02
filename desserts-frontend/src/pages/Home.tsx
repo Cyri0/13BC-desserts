@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import DessertCard from "../components/DessertCard"
 import { DessertCardProp } from "../components/DessertCard"
+import Cart from "../components/Cart"
 
 const Home = () => {
   const [desserts, setDesserts]  = useState<DessertCardProp[]>([])
@@ -15,8 +16,8 @@ const Home = () => {
   },[])
 
   return (
-    <div>
-        <section>
+    <div className="home">
+        <section className="dessert-panel">
         <h1>Desserts</h1>
         <div className="cards-grid">
             {
@@ -24,6 +25,8 @@ const Home = () => {
             }
         </div>
         </section>
+
+        <Cart />
     </div>
   )
 }

@@ -21,10 +21,22 @@
 .cards-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 800px;
-  width: 95%;
+
   margin: auto;
   gap: 20px;
+}
+
+.dessert-panel{
+  max-width: 800px;
+  width: 95%;
+}
+
+.home{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .dessert-card{
@@ -50,7 +62,7 @@
 }
 
 .add-btn{
-  --height: 55px;
+  --height: 45px;
   height: var(--height);
   aspect-ratio: 3;
   display: flex;
