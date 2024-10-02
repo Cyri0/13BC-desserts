@@ -1,5 +1,6 @@
-import { useState } from "react"
+import { useContext } from "react"
 import CartItem from "./CartItem"
+import { CartContext } from "../pages/Home"
 
 export type CartItemType = {
     name: string,
@@ -7,11 +8,12 @@ export type CartItemType = {
 }
 
 const Cart = () => {
-  const [cart, setCart] = useState<CartItemType[]>([
-    {name:"Alma", price: 2},
-    {name:"Körte", price: 3},
-    {name:"Szilva", price: 1.5},
-  ])
+    const cartCtx = useContext(CartContext)
+    if(!cartCtx){
+        throw new Error("Something is wrong, I can feel it")
+    }
+    const {cart} = cartCtx
+    
   return (
     <aside className="cart">
         <h2>Your Cart ({cart.length})</h2>
