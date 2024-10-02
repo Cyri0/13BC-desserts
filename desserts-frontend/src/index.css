@@ -104,10 +104,9 @@ button:focus-visible {
 .dessert-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 800px;
-  width: 95%;
   margin: auto;
   gap: 20px;
+  margin-top: 20px;
 }
 
 .dessert-card>img{
@@ -124,4 +123,14 @@ button:focus-visible {
 
 .dessert-card:has(.used)>img{
   border: 2px solid var(--Red);
+}
+
+.home{
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 3fr 2fr;
+  margin-top: 50px;
 }
