@@ -1,10 +1,17 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { DessertCardProp } from "./DessertCard"
+import { CartCtx } from "../App"
 
-const AddToCartBtn = () => {
+const AddToCartBtn = (props: DessertCardProp) => {
   const [quantity, setQuantity] = useState(0)
+
+  const cartctx = useContext(CartCtx)
+  if(!cartctx){throw new Error("Something is wrong, I can feel it...")}
+  const {cart,setCart} = cartctx;
 
   const increase = () => {
     setQuantity(quantity + 1)
+    setCart([...cart, props])
   }
 
   const decrease = () => {
