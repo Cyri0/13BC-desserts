@@ -103,3 +103,37 @@
 .dessert-card:has(.used)>img{
   border: 2px solid var(--Red);
 }
+
+.cart-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--Rose900);
+  strong{
+    display: block;
+  }
+  .quantity{
+    color: var(--Red);
+    font-weight: bold;
+  }
+  .price{
+    padding-left: 5px;
+  }
+  .sumprice{
+    font-weight: bold;
+  }
+
+  button{
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+  }
+
+  border-bottom: 1px solid var(--Rose300);
+  padding: 10px 0px;
+}
